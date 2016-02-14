@@ -34,13 +34,12 @@ public class Calculate {
         System.out.println();
     }
     
-    /*void calculateGiaiThua()
+    public int calculateGiaiThua(int x)
     {
-        int gt;
-        
-        if(n==1)
-            gt=1;
-        
-    }*/
+        if(x<=1)
+            return 1;
+        else 
+           return x*calculateGiaiThua(x-1);        
+    }
     
 }
