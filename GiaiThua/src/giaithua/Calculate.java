@@ -29,7 +29,9 @@ public class Calculate {
     
     public void displayNumber(int[] a ,int n)
     {        
-        
+        for(int i=0; i<n; i++)
+            System.out.print(a[i] + " ");
+        System.out.println();
     }
     
     /*void calculateGiaiThua()
