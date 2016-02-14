@@ -18,7 +18,7 @@ public class GiaiThua {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] a = new int[100];
+        double[] a = new double[100];
         int n;
         
         try{

@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
  * @author TrungNT
  */
 public class Calculate {        
-    public void inputNumber(int[] a, int n)
+    public void inputNumber(double[] a, int n)
     {                
         try{
             BufferedReader oBufferReader = new BufferedReader(new InputStreamReader(System.in));
@@ -20,29 +20,29 @@ public class Calculate {
             for(int i=0; i<n; i++)
             {
                 System.out.print("\na[" + i + "]=");
-                a[i]= Integer.parseInt(oBufferReader.readLine()); 
+                a[i]= Double.parseDouble(oBufferReader.readLine()); 
             }   
         }catch(Exception e){
             System.out.println(e.toString());
         }
     }
     
-    public void displayNumber(int[] a ,int n)
+    public void displayNumber(double[] a ,int n)
     {        
         for(int i=0; i<n; i++)
             System.out.print(a[i] + " ");
         System.out.println();
     }
     
-    public int calculateGiaiThua(int x)
+    public double calculateGiaiThua(double x)
     {
-        if(x<=1)
+        if(x==0)
             return 1;
-        else 
-           return x*calculateGiaiThua(x-1);        
+         
+        return x*calculateGiaiThua(x-1);        
     }
     
-    public void displayGiaiThuaNumber(int[] a, int n)
+    public void displayGiaiThuaNumber(double[] a, int n)
     {
         for(int i=0; i<n; i++)
            System.out.print(calculateGiaiThua(a[i]) + " ");
