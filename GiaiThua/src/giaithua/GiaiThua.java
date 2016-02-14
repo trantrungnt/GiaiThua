@@ -31,6 +31,8 @@ public class GiaiThua {
             oCalculate.displayNumber(a, n);
             
             //Tinh giai thua cac so co trong mang A
+            System.out.println("Giai thua cua cac phan tu co trong mang a la: ");
+            oCalculate.displayGiaiThuaNumber(a, n);
         }catch(Exception e){
             System.out.println(e.toString());
         }

@@ -42,4 +42,11 @@ public class Calculate {
            return x*calculateGiaiThua(x-1);        
     }
     
+    public void displayGiaiThuaNumber(int[] a, int n)
+    {
+        for(int i=0; i<n; i++)
+           System.out.print(calculateGiaiThua(a[i]) + " ");
+        System.out.println();
+    }
+    
 }
