@@ -5,6 +5,9 @@
  */
 package giaithua;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  *
  * @author TrungNT
@@ -15,10 +18,20 @@ public class GiaiThua {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here                
-        Calculate oCalculate = new Calculate();
-        oCalculate.inputNumber();
-        oCalculate.displayNumber();
+        int[] a = new int[100];
+        int n;
+        
+        try{
+            System.out.print("\nNhap n=");
+            BufferedReader oBufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            n = Integer.parseInt(oBufferedReader.readLine());
+            
+            Calculate oCalculate = new Calculate();
+            oCalculate.inputNumber(a, n);
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+        
     }
     
 }

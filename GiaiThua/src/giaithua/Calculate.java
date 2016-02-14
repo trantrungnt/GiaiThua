@@ -11,24 +11,34 @@ import java.io.InputStreamReader;
  *
  * @author TrungNT
  */
-public class Calculate {
-    int n;
-    public void inputNumber()
-    {
-        
-        
+public class Calculate {        
+    public void inputNumber(int[] a, int n)
+    {                
         try{
-            System.out.print("\nNhap n=");
-            BufferedReader oBufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            n = Integer.parseInt(oBufferedReader.readLine());
+            BufferedReader oBufferReader = new BufferedReader(new InputStreamReader(System.in));
+            
+            for(int i=0; i<n; i++)
+            {
+                System.out.print("\na[" + i + "]=");
+                a[i]= Integer.parseInt(oBufferReader.readLine()); 
+            }   
         }catch(Exception e){
             System.out.println(e.toString());
         }
     }
     
-    public void displayNumber()
-    {
-        System.out.println(n);
+    public void displayNumber(int[] a ,int n)
+    {        
+        
     }
+    
+    /*void calculateGiaiThua()
+    {
+        int gt;
+        
+        if(n==1)
+            gt=1;
+        
+    }*/
     
 }
